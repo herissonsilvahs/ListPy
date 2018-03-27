@@ -11,7 +11,6 @@ class ArrayList():
         self.lenght = self.lenght + 1
 
     def insert(self, position, element):
-        position = position-1
         ant = self.data[:position]
         ant.append(element)
         for i in self.data[position:]:
@@ -19,22 +18,30 @@ class ArrayList():
         self.data = ant
 
     def remove(self):
-        pass
+        self.data.pop()
 
     def removeAt(self, position):
         pass
 
     def indexOf(self, element):
-        pass
+        index = 0
+        while(index < len(self.data)):
+            if(self.data[index] == element):
+                return index
+            else:
+                index = index+1
+        return -1
 
     def size(self):
-        pass
+        return len(self.data)
 
-    def getElement(self, element):
-        pass
+    def getElement(self, position):
+        return self.data[position]
 
     def isEmpty(self):
-        pass
+        if(len(self.data) > 0):
+            return True
+        return False
 
     def __str__(self):
         return str(self.data)
