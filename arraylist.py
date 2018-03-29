@@ -16,13 +16,13 @@ class ArrayList():
         self.data = ant
 
     def remove(self):
-        self.data.pop()
+        pass
 
     def removeAt(self, position):
-        ant = self.data[:position+1]
-        ant.pop()
-        for i in self.data[1+position:]:
-            ant.append(i)
+        ant = self.data[:position+1] # Corto o array na posição do elemento
+        ant.pop() # Removo o ultimo elemento
+        for i in self.data[1+position:]: # Percorro o restante do array
+            ant.append(i) # Adiciono no array cortado
         self.data = ant
 
     def indexOf(self, element):
