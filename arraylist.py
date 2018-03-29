@@ -9,13 +9,13 @@ class ArrayList():
         self.append(element)
 
     def insert(self, position, element):
-        ant = self.data[:position]
-        ant.append(element)
-        for i in self.data[position:]:
+        ant = self.data[:position] # Quebra o array na posição
+        ant.append(element) # Adiciona o elemento
+        for i in self.data[position:]: # Percorre o resto do array adicionando os elementos
             ant.append(i)
         self.data = ant
 
-    def remove(self):
+    def remove(self, element):
         pass
 
     def removeAt(self, position):
