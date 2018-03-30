@@ -16,7 +16,13 @@ class ArrayList():
         self.data = ant
 
     def remove(self, element):
-        pass
+        index = 0
+        for item in self.data:
+            if item == element:
+                self.removeAt(index)
+                return item
+            index=index+1
+        return None
 
     def removeAt(self, position):
         ant = self.data[:position+1] # Corto o array na posição do elemento

@@ -15,3 +15,7 @@ arl.removeAt(1)
 print(arl)
 
 print(arl.indexOf(5))
+
+arl.remove(5)
+
+print(arl)
