@@ -1,28 +1,52 @@
 
+class Node():
+    element=None
+    next=None
+
+    def __init__(self, element):
+        self.element = element
+
 class LinkedList():
+    lenght=0
+    head=None
+
     def __init__(self):
         pass
 
-    def append(self):
+    def append(self, element):
+        node = Node(element)
+        current = self.head
+
+        if current == None:
+            self.head = node
+
+        current = self.head
+
+        while(current.next):
+            current = current.next
+
+        current.next = node
+        self.lenght += 1
+
+    def insert(self, position, element):
         pass
 
-    def insert(self):
+    def remove(self, element):
         pass
 
-    def remove(self):
+    def removeAt(self, position):
         pass
 
-    def removeAt(self):
+    def indexOf(self, element):
         pass
 
-    def indexOf(self):
-        pass
-    
     def size(self):
-        pass
+        return self.lenght
 
-    def getElement(self):
+    def getElement(self, position):
         pass
 
     def isEmpty(self):
-        pass
+        if self.lenght == 0:
+            return True
+        return False
