@@ -15,21 +15,20 @@ class LinkedList():
 
     def append(self, element):
         node = Node(element)
-        current = self.head
 
-        if current == None:
+        if self.head == None: # if first element
             self.head = node
+        else: # if existing some element
+            current = self.head
+            while(current.next):
+                current = current.next
 
-        current = self.head
-
-        while(current.next):
-            current = current.next
-
-        current.next = node
+            current.next = node
         self.lenght += 1
 
     def insert(self, position, element):
-        pass
+        node = Node(element)
+        current = self.head
 
     def remove(self, element):
         pass

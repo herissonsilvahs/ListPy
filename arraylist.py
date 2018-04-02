@@ -9,9 +9,9 @@ class ArrayList():
         self.append(element)
 
     def insert(self, position, element):
-        ant = self.data[:position] # Quebra o array na posição
-        ant.append(element) # Adiciona o elemento
-        for i in self.data[position:]: # Percorre o resto do array adicionando os elementos
+        ant = self.data[:position] # break the array in position
+        ant.append(element) # add element
+        for i in self.data[position:]: # scroll through the rest of array adding the elements
             ant.append(i)
         self.data = ant
 
@@ -25,10 +25,10 @@ class ArrayList():
         return None
 
     def removeAt(self, position):
-        ant = self.data[:position+1] # Corto o array na posição do elemento
-        ant.pop() # Removo o ultimo elemento
-        for i in self.data[1+position:]: # Percorro o restante do array
-            ant.append(i) # Adiciono no array cortado
+        ant = self.data[:position+1] # cut array in element position
+        ant.pop() # remove last element
+        for i in self.data[1+position:]: # scroll through the rest of array
+            ant.append(i) # add in truncated array
         self.data = ant
 
     def indexOf(self, element):

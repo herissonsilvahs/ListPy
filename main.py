@@ -1,21 +1,11 @@
 from arraylist import ArrayList
+from linkedlist import LinkedList
 
 arl = ArrayList([1,2,3,4,5])
+lkl = LinkedList()
 
-arl.insert(0, 4)
+lkl.append(4)
+lkl.append(6)
+lkl.append(5)
 
-print(arl)
-
-print("Posicao do elemento 5:")
-
-print(arl.indexOf(5))
-
-arl.removeAt(1)
-
-print(arl)
-
-print(arl.indexOf(5))
-
-arl.remove(5)
-
-print(arl)
+print(lkl.lenght)
