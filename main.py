@@ -8,4 +8,8 @@ lkl.append(4)
 lkl.append(6)
 lkl.append(5)
 
-print(lkl.lenght)
+lkl.insert(3, 9)
+
+print(lkl.size())
+
+lkl.showHead()

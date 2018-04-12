@@ -27,8 +27,21 @@ class LinkedList():
         self.lenght += 1
 
     def insert(self, position, element):
-        node = Node(element)
-        current = self.head
+        if position >= 0 and position <= self.lenght-1:
+            node = Node(element)
+            current = self.head
+            if position == 0:
+                node.next = current
+                self.head = node
+            else:
+                pos = 0
+                while(pos < position):
+                    current = current.next
+                    pos+=1
+                node.next = current.next
+                current.next = node
+
+            self.lenght += 1
 
     def remove(self, element):
         pass
@@ -49,3 +62,6 @@ class LinkedList():
         if self.lenght == 0:
             return True
         return False
+
+    def showHead(self):
+        print(self.head.element)
