@@ -50,7 +50,18 @@ class LinkedList():
         pass
 
     def indexOf(self, element):
-        pass
+        if self.head.element == element:
+            return 0
+
+        current = self.head
+        indice=0
+        while(current):
+            if current.element == element:
+                return indice
+            indice+=1
+            current = current.next
+
+        return -1
 
     def size(self):
         return self.lenght
@@ -62,6 +73,3 @@ class LinkedList():
         if self.lenght == 0:
             return True
         return False
-
-    def showHead(self):
-        print(self.head.element)
