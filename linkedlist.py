@@ -44,7 +44,8 @@ class LinkedList():
             self.lenght += 1
 
     def remove(self, element):
-        pass
+        indice = self.indexOf(element)
+        return self.removeAt(indice)
 
     def removeAt(self, position):
         indice = 0
@@ -69,11 +70,8 @@ class LinkedList():
                 self.lenght -= 1
                 current.next = None
                 return current.element
-                
-        
+
         return None
-
-
 
     def indexOf(self, element):
         if self.head.element == element:
