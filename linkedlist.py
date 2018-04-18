@@ -1,10 +1,4 @@
-
-class Node():
-    element=None
-    next=None
-
-    def __init__(self, element):
-        self.element = element
+from node import Node
 
 class LinkedList():
     lenght=0
