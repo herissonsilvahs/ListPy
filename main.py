@@ -19,3 +19,12 @@ lkl.remove(5)
 print(lkl.size())
 
 print(lkl.indexOf(4))
+
+element = lkl.getElement(1)
+
+print(element)
+
+rmElement = lkl.removeAt(0)
+
+print(rmElement)
+print(lkl.lenght)
